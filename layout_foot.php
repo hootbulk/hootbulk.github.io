@@ -11,6 +11,6 @@
 
 <!-- Bootstrap -->
 <script src="libs/css/bootstrap/js/bootstrap.min.js"></script>
-
+<?php $my_env_var = getenv('ENV_VAR'); echo $my_env_var; echo 'Hello' ?>
 </body>
 </html>
