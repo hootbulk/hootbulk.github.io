@@ -1,12 +1,25 @@
 <?php
 
+  private $host = "us-cdbr-iron-east-03.cleardb.net";
+  private $db_name = "heroku_14623f4742d3625";
+  private $username = "b374ad5080867e";
+  private $password = "5dca8c25";
+
 class Database{
 
-      private $host = "us-cdbr-iron-east-03.cleardb.net";
-      private $db_name = "heroku_14623f4742d3625";
-      private $username = "b374ad5080867e";
-      private $password = "5dca8c25";
-
+    // $my_env_var = getenv('ENV_VAR');
+    //
+    // if($my_env_var != 'production') {
+    //   private $host = "us-cdbr-iron-east-03.cleardb.net";
+    //   private $db_name = "heroku_14623f4742d3625";
+    //   private $username = "b374ad5080867e";
+    //   private $password = "5dca8c25";
+    // } else {
+    //   private $host = "us-cdbr-iron-east-03.cleardb.net";
+    //   private $db_name = "heroku_f21a9b33cf39ec3";
+    //   private $username = "b34b087174976e";
+    //   private $password = "f2315a94";
+    // }
     public $conn;
 
     // get the database connection
