@@ -2,10 +2,10 @@
 class Database{
 
     // specify your own database credentials
-    private $host = "localhost:8888";
-    private $db_name = "hootbulk";
-    private $username = "root";
-    private $password = "root";
+    private $host = "us-cdbr-iron-east-03.cleardb.net";
+    private $db_name = "heroku_14623f4742d3625";
+    private $username = "b374ad5080867e";
+    private $password = "5dca8c25";
     public $conn;
 
     // get the database connection
