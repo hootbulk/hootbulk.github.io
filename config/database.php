@@ -3,9 +3,9 @@ class Database{
 
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "borilabs_sample";
-    private $username = "borilabs_sample";
-    private $password = "Sample123!";
+    private $db_name = "hootbulk";
+    private $username = "root";
+    private $password = "root";
     public $conn;
 
     // get the database connection
