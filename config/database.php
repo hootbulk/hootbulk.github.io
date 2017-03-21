@@ -1,6 +1,8 @@
 <?php
 
 $my_env_var = getenv('ENV_VAR');
+echo 'Hello';
+echo $my_env_var;
 
 class Database{
 
