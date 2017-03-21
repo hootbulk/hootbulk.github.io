@@ -2,9 +2,9 @@
 
 class Database{
 
-    let env_var = process.env.ENV_VAR;
+    $my_env_var = getenv('ENV_VAR');
 
-    if(env_var != 'production') {
+    if($my_env_var != 'production') {
       private $host = "us-cdbr-iron-east-03.cleardb.net";
       private $db_name = "heroku_14623f4742d3625";
       private $username = "b374ad5080867e";
