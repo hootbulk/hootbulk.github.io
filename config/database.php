@@ -2,7 +2,7 @@
 class Database{
 
     // specify your own database credentials
-    private $host = "localhost";
+    private $host = "localhost:8888";
     private $db_name = "hootbulk";
     private $username = "root";
     private $password = "root";
