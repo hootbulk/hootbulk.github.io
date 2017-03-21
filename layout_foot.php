@@ -10,5 +10,9 @@
 
 <script src="libs/css/bootstrap/js/bootstrap.min.js"></script>
 
+<?php
+echo $my_env_var;
+?>
+
 </body>
 </html>
