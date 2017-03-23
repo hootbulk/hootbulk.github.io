@@ -7,7 +7,6 @@
 }
 #comp_mode div:first-child a  {
     height: 50px;
-    display: block;
     background-color: #F6F6F6;
     position: relative;
     flex: 1;
@@ -26,7 +25,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);/* Centers Icons */
 }
 .comp_mode_ICO path {fill: #5B5B5B}/* Icon Color */
 
