@@ -1,0 +1,9 @@
+body, a, section, img, div {
+    margin: 0;
+    padding: 0;
+}
+body {background-color: #FAF7F5}
+
+.flex {display: flex}
+.row {flex-flow: row}
+.column {flex-flow: column}

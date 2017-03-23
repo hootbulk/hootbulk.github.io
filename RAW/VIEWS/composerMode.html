@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="composerMode.css">
+        <link rel="stylesheet" href="master.css">
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> <!-- JQuery CDN -->
+    </head>
+
+    <body>
+        
+        <section id="comp_mode" class="flex column">
+            <div class="flex row">
+                <a href="#" class="active"><img src="../ASSETS/SEND_NOW_ICO.svg" class="comp_mode_ICO"></a>
+                <a href="#" class="shadow_left"><img src="../ASSETS/TIME_SENSITIVE_ICO.svg" class="comp_mode_ICO"></a>
+                <a href="#" class="shadow_left"><img src="../ASSETS/SEND_IN_BULK_ICO.svg" class="comp_mode_ICO"></a>
+            </div>
+            
+            <div id="comp_mode_content" class="flex column">
+                <!-- Composer Settings Components -->
+            </div>
+        </section>
+        
+        <script src="svg_color.js"></script>
+    </body>
+</html>
+
+<!-- Class Toggle Conditions
+    DEFAULT: "Send Now" 
+
+    IF: "Send Now" is selected:
+        - ADD: 'active' class to 'a(1)'
+        - ADD: 'shadow_left' class to 'a(2)'
+        - ADD: 'shadow_left' class in 'a(3)'
+
+    IF: "Time Sensitive" is selected:
+        - ADD: 'active' class to 'a(2)'
+        - ADD: 'shadow_right stack_1' classes to 'a(1)'
+        - ADD: 'shadow_left' class to 'a(3)'
+
+    IF: "Send in Bulk" is selected:
+        - ADD: 'active' class to 'a(3)'
+        - ADD: 'shadow_right stack_2' classes to 'a(1)'
+        - ADD: 'shadow_right stack_1' classes to 'a(2)'
+-->

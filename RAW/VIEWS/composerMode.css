@@ -1,0 +1,37 @@
+#comp_mode {
+    width: 250px;
+/*    height: 300px;  remove */
+    background-color: #EBE8E6;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2);
+}
+#comp_mode div:first-child a  {
+    height: 50px;
+    display: block;
+    background-color: #F6F6F6;
+    position: relative;
+    flex: 1;
+}
+#comp_mode div:first-child a:first-child {border-radius: 10px 0 0 0;}
+#comp_mode div:first-child a:last-child {border-radius: 0 10px 0 0}
+
+.shadow_left {box-shadow: -1px 0px 3px hsla(0, 0%, 0%, 0.2)}
+.shadow_right {box-shadow: 1px 0px 3px hsla(0, 0%, 0%, 0.2)}
+.shadow_both {box-shadow: -1px 0px 3px hsla(0, 0%, 0%, 0.2), 1px 0px 3px hsla(0, 0%, 0%, 0.2)}
+.stack_1 {z-index: 1}
+.stack_2 {z-index: 2}
+
+.comp_mode_ICO {
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.comp_mode_ICO path {fill: #5B5B5B}/* Icon Color */
+
+#comp_mode div:first-child a.active {background-color: #EBE8E6} /* selected mode */
+#comp_mode div:first-child a:not([class="active"]):hover {background-color: #FAF7F5}
+#comp_mode div:first-child a:not([class="active"]):hover .comp_mode_ICO path {fill: #776019}
+
+#comp_mode_content {margin: 12px 6px}
