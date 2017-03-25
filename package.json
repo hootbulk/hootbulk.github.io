@@ -1,0 +1,22 @@
+{
+  "name": "hootbulk",
+  "version": "1.0.0",
+  "description": "HootBulk First Version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hootbulk/hootbulk.github.io.git"
+  },
+  "author": "Luis Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hootbulk/hootbulk.github.io/issues"
+  },
+  "homepage": "https://github.com/hootbulk/hootbulk.github.io#readme",
+  "dependencies": {
+    "react": "^15.4.2"
+  }
+}
