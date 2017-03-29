@@ -5,7 +5,7 @@ const PokeList = ({listOfPokemon, openModal}) => {
   let pokemon = listOfPokemon.map((creature) => {
     return (
       <Col sm={6} md={4} key={creature.name}>
-        <ListGroupItem className="PokeList-item">{creature.name}</ListGroupItem>
+        <ListGroupItem>{creature.name}</ListGroupItem>
       </Col>
     )
   });
