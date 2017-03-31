@@ -1,0 +1,23 @@
+/* Composer Submit Component Styling */
+#comp_social {
+    width: 250px;
+    background-color: #F6F6F6;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2)
+}
+
+#comp_social ul:first-child li {
+    height: 50px; 
+    width: 250px; 
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2);
+    border-radius: 10px 10px 0 0;
+}
+#comp_social ul:last-child {
+    height: 300px;/* Remove */
+    background-color: #EBE8E6;
+    padding: 25px 15px;
+}
+#comp_social ul:last-child li {margin-bottom: 10px}
+
+#comp_social .ICO {width: 30px; height: 30px}
+#comp_social .clr_01 path {fill: #7d8082}

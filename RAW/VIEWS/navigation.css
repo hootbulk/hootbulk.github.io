@@ -1,0 +1,65 @@
+/* Navigation Component Styling */
+#main_nav {
+    width: 50px;
+    margin: 25px;/* remove */
+    background-color: #332D27;
+    border-radius: 12px;
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2);
+    transition: width 0.2s;
+    transition-timing-function: ease-in-out
+}
+
+#main_nav ul {height: 95vh}
+#main_nav ul li {
+    width: 50px; 
+    height: 50px;
+    background-color: #423A32;
+    transition: width 0.2s;
+    transition-timing-function: ease-in-out
+}
+#main_nav ul li:not(:first-child) {align-items: center}
+#main_nav ul li:first-child {
+    background-color: #D9B121;
+    border-radius: 12px 12px 0 0
+}
+#main_nav ul li:last-child {border-radius: 0 0 12px 12px}
+#main_nav ul li:nth-last-child(3) {margin-top: auto; background-color: #60519D}/* background color changes based on the account pic */
+
+#main_nav ul li:first-child .ICO {width: 25px; height: 25px}
+#main_nav .ICO {width: 20px; height: 20px}
+#main_nav ul li:not(:first-child) .ICO {margin-left: 15px}
+#main_nav .PRO_ICO {width: 50px; height: 50px}
+#main_nav h1 {display: none}
+
+/* Active State */
+#main_nav ul li.ac {background-color: #FAF7F5}
+#main_nav ul li.ac .ICO path, #main_nav ul li.ac .ICO polygon {fill: #776019}
+#main_nav ul li.ac h1 {color: #776019}
+
+/* Hover State */
+#main_nav:hover, #main_nav:hover ul li {width: 200px;}
+#main_nav:hover ul li.center {justify-content: flex-start}
+#main_nav:hover ul li:first-child .ICO {margin: 0 auto}
+
+#main_nav:hover h1 {
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 11pt;
+    color: #bcaea1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    clip: auto;
+    margin-left: 20px;
+    padding: 3px;
+}
+#main_nav:hover ul li:nth-last-child(3) h1{
+    margin-left: 5px;
+    color: #e5e5e5
+}
+#main_nav:hover ul li:hover:not(:nth-last-child(3)):not(.ac) h1 {color: #B3921B}
+
+#main_nav:hover ul li:hover:not(:first-child) {background-color: #594E44}
+#main_nav:hover ul li:hover:nth-last-child(3) {background-color: #5B4D94}
+#main_nav:hover ul li:hover:not(:first-child):not(.ac) .ICO path, #main_nav:hover ul li:hover:not(:first-child):not(.ac) .ICO polygon {fill: #B3921B}
