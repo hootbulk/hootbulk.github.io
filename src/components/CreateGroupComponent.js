@@ -20,7 +20,7 @@ class CreateGroupComponent extends Component {
   }
   onSave = (e) => {
 
-    fetch("https://hootbulk.herokuapp.com/api/create_group.php",
+    fetch("http://hootbulk.github.io/src/api/create_group.php",
     {
         method: "POST",
         body: JSON.stringify({
