@@ -1,0 +1,26 @@
+/* Composer Submit Component Styling */
+#comp_submit {
+    height: 50px;
+    width: 625px;
+    background-color: #F6F6F6;
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2)
+}
+
+#comp_submit ul li {width: 50px; height: 50px}
+#comp_submit ul li:first-child {flex: 1}
+#comp_submit ul li:last-child {background-color: #497A72}
+
+#comp_submit span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: #7d8082
+}
+
+#comp_submit .ICO {width: 25px; height: 25px}
+#comp_submit .clr_01 polygon {fill: #FFFCFC}
+#comp_submit .clr_02 path {fill: #7d8082}
+
+/* Hover State */
+#comp_submit ul li:last-child:hover {background-color: #3A615A}
+#comp_submit ul li:nth-last-child(2):hover .clr_02 path {fill: #3A615A}
