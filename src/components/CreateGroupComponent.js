@@ -20,7 +20,7 @@ class CreateGroupComponent extends Component {
       this.setState({group_description: e.target.value});
   }
   onSave = (e) => {
-    $.post("api/create_group.php", {
+    $.post("https://hootbulk.github.io/src/api/create_group.php", {
           user_id: this.state.user_id,
           group_name: this.state.group_name,
           group_description: this.state.group_description,
