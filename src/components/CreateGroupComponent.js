@@ -20,9 +20,13 @@ class CreateGroupComponent extends Component {
   }
   onSave = (e) => {
 
-    fetch("http://hootbulk.github.io/src/api/create_group.php",
+    fetch("https://hootbulk.github.io/src/api/create_group.php",
     {
         method: "POST",
+        mode: 'cors',
+        headers:{
+        'Access-Control-Allow-Origin':'*'
+        },
         body: JSON.stringify({
                 user_id: this.state.user_id,
                 group_name: this.state.group_name,
