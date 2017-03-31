@@ -13,7 +13,7 @@
 #main_nav ul li {
     width: 50px; 
     height: 50px;
-    background-color: #423A32;
+    background-color: #423A32; 
     transition: width 0.2s;
     transition-timing-function: ease-in-out
 }
@@ -38,7 +38,6 @@
 
 /* Hover State */
 #main_nav:hover, #main_nav:hover ul li {width: 200px;}
-#main_nav:hover ul li.center {justify-content: flex-start}
 #main_nav:hover ul li:first-child .ICO {margin: 0 auto}
 
 #main_nav:hover h1 {
@@ -60,6 +59,6 @@
 }
 #main_nav:hover ul li:hover:not(:nth-last-child(3)):not(.ac) h1 {color: #B3921B}
 
-#main_nav:hover ul li:hover:not(:first-child) {background-color: #594E44}
+#main_nav:hover ul li:hover:not(:first-child):not(.ac):not(:nth-last-child(3)) {background-color: #594E44}
 #main_nav:hover ul li:hover:nth-last-child(3) {background-color: #5B4D94}
 #main_nav:hover ul li:hover:not(:first-child):not(.ac) .ICO path, #main_nav:hover ul li:hover:not(:first-child):not(.ac) .ICO polygon {fill: #B3921B}
