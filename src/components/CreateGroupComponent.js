@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import 'whatwg-fetch';
-import $ from 'jquery';
 
 class CreateGroupComponent extends Component {
   constructor(props) {
@@ -20,18 +19,17 @@ class CreateGroupComponent extends Component {
       this.setState({group_description: e.target.value});
   }
   onSave = (e) => {
-    $.post("http://localhost:3000/api/create_group.php", {
-          user_id: this.state.user_id,
-          group_name: this.state.group_name,
-          group_description: this.state.group_description,
-          group_type: this.state.group_type
-        },
-        function(res){
-            this.setState({successCreation: res});
-            this.setState({group_name: ""});
-            this.setState({group_description: ""});
-        }.bind(this)
-    );
+
+    fetch("http://hootbulk.github.io/src/api/create_group.php",
+    {
+        method: "POST",
+        body: JSON.stringify({
+                user_id: this.state.user_id,
+                group_name: this.state.group_name,
+                group_description: this.state.group_description,
+                group_type: this.state.group_type
+            	})
+    });
     e.preventDefault();
   }
 
