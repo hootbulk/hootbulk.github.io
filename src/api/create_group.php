@@ -15,6 +15,6 @@ if($_POST){
     $group->group_description = $_POST['group_description'];
     $group->group_type = $_POST['group_type'];
 
-    echo $user->create() ? "true" : "false";
+    echo $group->create() ? "true" : "false";
 }
 ?>

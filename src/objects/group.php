@@ -41,6 +41,18 @@ class Group{
         }
     }
 
+    public function readAll(){
+
+        $query = "SELECT * FROM " . $this->table_name . " ORDER BY id DESC";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        $results=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return json_encode($results);
+    }
+
   public function update(){
 
     $query = "UPDATE users

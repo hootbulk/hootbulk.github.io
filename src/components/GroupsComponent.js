@@ -26,7 +26,7 @@ class GroupsComponent extends Component {
       <ListGroup>
         <Col sm={6} md={4}>
           <ListGroupItem>
-            <button onClick={this.handleModalOpen}>Modal</button>
+            <button onClick={this.handleModalOpen}>Create Group</button>
             <CreateGroupModal closeModal={this.handleModalClose} showModal={this.state.showModal} />
           </ListGroupItem>
         </Col>

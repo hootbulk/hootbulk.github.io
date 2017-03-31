@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import 'whatwg-fetch';
+import $ from 'jquery';
 
 class CreateGroupComponent extends Component {
   constructor(props) {
@@ -10,10 +11,8 @@ class CreateGroupComponent extends Component {
       group_description: '',
       group_type: 1
 		}
+    this.onSave = this.onSave.bind(this);
 	}
-  componentWillUnmount() {
-    this.serverRequest.abort();
-  }
   onGroupNameChange = (e) => {
       this.setState({group_name: e.target.value});
   }
@@ -21,21 +20,18 @@ class CreateGroupComponent extends Component {
       this.setState({group_description: e.target.value});
   }
   onSave = (e) => {
-    var payload = {
-      user_id: this.state.user_id,
-      group_name: this.state.group_name,
-      group_description: this.state.group_description,
-      group_type: this.state.group_type
-    };
-
-    var data = new FormData();
-    data.append( "json", JSON.stringify( payload ) );
-
-    fetch("create_group.php",
-    {
-        method: "POST",
-        body: data
-    });
+    $.post("http://localhost:3000/api/create_group.php", {
+          user_id: this.state.user_id,
+          group_name: this.state.group_name,
+          group_description: this.state.group_description,
+          group_type: this.state.group_type
+        },
+        function(res){
+            this.setState({successCreation: res});
+            this.setState({group_name: ""});
+            this.setState({group_description: ""});
+        }.bind(this)
+    );
     e.preventDefault();
   }
 
