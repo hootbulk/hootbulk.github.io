@@ -19,10 +19,15 @@ class CreateGroupComponent extends Component {
       this.setState({group_description: e.target.value});
   }
   onSave = (e) => {
-
+    let header = new Headers({
+      'Access-Control-Allow-Origin':'*',
+      'Content-Type': 'multipart/form-data'
+    });
     fetch("http://hootbulk.github.io/src/api/create_group.php",
     {
         method: "POST",
+        mode: 'cors',
+        header: header,
         body: JSON.stringify({
                 user_id: this.state.user_id,
                 group_name: this.state.group_name,
