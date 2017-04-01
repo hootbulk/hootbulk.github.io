@@ -1,0 +1,29 @@
+#social_comp {
+    height: 50px;
+    width: 220px;/* Remove */
+    background-color: #F9F7F5;
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2)
+}
+
+#social_comp ul li:first-child {
+    width: 25px;
+    height: 50px;
+    background-color: #334F8D; /* Color Changes based on Social Network */
+}
+#social_comp ul li:nth-child(2) {
+    width: 50px;
+    height: 50px;
+    background-color: #195F66;/* Remove */
+}
+#social_comp ul li:last-child {flex: 1}
+#social_comp ul li:last-child span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    font-weight: 400;
+    color: #888B8C;
+}
+
+#social_comp .ICO:first-child, #social_comp .ICO:first-child path {
+    fill: white;
+    height: 17px
+}
