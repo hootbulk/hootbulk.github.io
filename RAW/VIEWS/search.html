@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="search.css">
+        <link rel="stylesheet" href="master.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script> <!-- JQuery CDN -->
+        <script src="svg_color.js"></script>
+    </head>
+    
+    <body>
+        
+        <div id="search">
+            <ul class="flex column">
+                
+                <!-- Search Header -->
+                <li id="search_header">
+                    <ul class="flex">
+                        <li class="flex">
+                            <img class="ICO" src="../ASSETS/SEARCH_ICO.svg">
+                        </li>
+                        <li class="flex">
+                            <input type="search" name="filter" placeholder="Search Snippet"><!-- placeholder text changes based on section -->
+                        </li>
+                        <li class="flex center">
+                            <img class="ICO" src="../ASSETS/FILTER_ICO.svg">
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Search Body -->
+                <li id="search_body">
+                    <ul class="flex column">
+                        <li class="flex ac">
+                            <div class="flex">
+                                <img class="ICO" src="../ASSETS/FLT_LIST_ICO.svg">
+                            </div>
+                            <div class="flex">
+                                <span>List</span>
+                            </div>
+                            <div class="flex center">
+                                <div class="sel"></div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex">
+                            <div class="flex">
+                                <img class="ICO" src="../ASSETS/FLT_FAV_ICO.svg">
+                            </div>
+                            <div class="flex">
+                                <span>Favorites</span>
+                            </div>
+                            <div class="flex center">
+                                <div class="sel"></div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex">
+                            <div class="flex">
+                                <img class="ICO" src="../ASSETS/FLT_DATE_ICO.svg">
+                            </div>
+                            <div class="flex">
+                                <span>Date - ascending</span>
+                            </div>
+                            <div class="flex center">
+                                <div class="sel"></div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex">
+                            <div class="flex">
+                                <img class="ICO" src="../ASSETS/FLT_DATE_ICO.svg">
+                            </div>
+                            <div class="flex">
+                                <span>Date - descending</span>
+                            </div>
+                            <div class="flex center">
+                                <div class="sel"></div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex">
+                            <div class="flex">
+                                <img class="ICO" src="../ASSETS/FLT_NAME_ICO.svg">
+                            </div>
+                            <div class="flex">
+                                <span>Name - ascending</span>
+                            </div>
+                            <div class="flex center">
+                                <div class="sel"></div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex">
+                            <div class="flex">
+                                <img class="ICO" src="../ASSETS/FLT_NAME_ICO.svg">
+                            </div>
+                            <div class="flex">
+                                <span>Name - descending</span>
+                            </div>
+                            <div class="flex center">
+                                <div class="sel"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Search Footer -->
+                <li id="search_footer">
+                    <ul class="flex">
+                        <li class="flex center ac">
+                            <img class="ICO" src="../ASSETS/WRAP_ICO_3.svg">
+                        </li>
+                        <li class="flex center">
+                            <img class="ICO" src="../ASSETS/WRAP_ICO_2.svg">
+                        </li>
+                        <li class="flex center">
+                            <img class="ICO" src="../ASSETS/WRAP_ICO_1.svg">
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <script>
+            $(document).ready(function(){
+                $("#search #search_footer ul li").click(function(){
+                    $("#search #search_footer ul li").removeClass("ac");
+                    $(this).addClass("ac");
+                });
+                
+                $("#search #search_body ul li").click(function(){
+                    $("#search #search_body ul li").removeClass("ac");
+                    $(this).addClass("ac");
+                });
+                
+                $("#search #search_header ul li:last-child").click(function () {
+                    $("#search #search_body, #search #search_footer").slideToggle(300, "swing");
+                    
+                    $("#search #search_header ul li:last-child .ICO").toggleClass("ac");
+                    
+                    if ($('#search #search_header ul').css('border-radius') === '12px 12px 0px 0px') {
+                        
+                        setTimeout(function (){
+                          $("#search #search_header ul").css("border-radius", "12px")
+                        }, 250);
+                        
+                    } else {
+                        $("#search #search_header ul").css("border-radius", "12px 12px 0px 0px");
+                    }
+                });
+            });
+        </script>
+        
+    </body>
+</html>

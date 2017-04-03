@@ -1,0 +1,136 @@
+#search {
+    width: 200px;
+    border-radius: 12px;
+    background-color: #F9F7F5;
+    box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2)
+}
+#search #search_body, #search #search_footer {display: none}
+
+/*************************/
+/* Search Header Styling */
+/*************************/
+#search #search_header {z-index: 7}
+#search #search_header ul {
+    height: 25px;
+    background-color: #F9F7F5;
+    border-radius: 12px;
+/*    border-radius: 12px 12px 0px 0px;*/
+    box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.1)
+}
+#search #search_header ul li {align-items: center}
+#search #search_header ul li:first-child, #search #search_header ul li:last-child {width: 25px}
+#search #search_header ul li:nth-child(2) {flex: 1}
+
+#search #search_header ul li:nth-child(2) input[type=search] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    color: #B3B3B3;
+    flex: 1;
+}
+#search #search_header ul li:nth-child(2) input[type=search]::-webkit-input-placeholder {
+    font-family: inherit;
+    font-size: 7pt;
+    font-weight: 400;
+    color: inherit;
+}
+#search #search_header ul li:nth-child(2) input[type=search]::-moz-placeholder {
+    font-family: inherit;
+    font-size: 7pt;
+    font-weight: 400;
+    color: inherit;
+}
+
+#search #search_header ul li:first-child .ICO, #search #search_header ul li:first-child .ICO path {height: 16px; width: 16px; fill: #999999}
+#search #search_header ul li:first-child .ICO {margin-left: auto}
+
+#search #search_header ul li:last-child .ICO {height: 12px; width: 12px}
+#search #search_header ul li:last-child .ICO path {fill: #999999}
+#search #search_header ul li:last-child .ac path {fill: #D9C16C}
+
+
+/*************************/
+/* Search Body Styling */
+/*************************/
+#search #search_body ul li {
+    height: 25px;
+    box-shadow: 0px 1px 0px hsla(0, 0%, 0%, 0.075)
+}
+#search #search_body ul li div:first-child {
+    width: 25px; 
+    height: 25px;
+    align-items: center;
+}
+#search #search_body ul li div:first-child .ICO, #search #search_body ul li div:first-child .ICO path {margin-left: auto; fill: #A6A295}
+#search #search_body ul li div .ICO {height: 12px; width: 12px;}
+
+#search #search_body ul li div:nth-child(2) {
+    flex: 1;
+    align-items: center;
+    margin-left: 10px;
+}
+#search #search_body ul li div:nth-child(2) span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: #A6A295;
+    -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+    cursor: default;
+}
+
+
+#search #search_body ul li div:last-child {width: 25px}
+#search #search_body ul li div:last-child .sel {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #A6A295;
+    border-radius: 3px;
+}
+
+/* search body active styling */
+#search #search_body ul li.ac {background-color: #F2F0ED}
+#search #search_body ul li.ac div:first-child .ICO path {fill: #B39F59}
+#search #search_body ul li.ac div:nth-child(2) span {color: #B39F59}
+#search #search_body ul li.ac div:last-child .sel {
+    background-color: #B39F59;
+    border: none
+}
+
+/* search body hover styling */
+#search #search_body ul li:hover {background-color: #F2F0ED}
+
+/* Layering */
+#search #search_body ul li:first-child {z-index: 6}
+#search #search_body ul li:nth-child(2) {z-index: 5}
+#search #search_body ul li:nth-child(3) {z-index: 4}
+#search #search_body ul li:nth-child(4) {z-index: 3}
+#search #search_body ul li:nth-child(5) {z-index: 2}
+#search #search_body ul li:last-child {z-index: 1}
+
+/*************************/
+/* Search Footer Styling */
+/*************************/
+#search #search_footer ul {
+    height: 25px;
+    background-color: #F9F7F5;
+    border-radius: 0px 0px 12px 12px;
+    box-shadow: 0px -1px 2px hsla(0, 0%, 0%, 0.1);
+    z-index: 1;
+}
+#search #search_footer ul li {flex: 1; height: 25px}
+#search #search_footer ul li:first-child {border-radius:  0px 0px 0px 12px}
+#search #search_footer ul li:last-child {border-radius: 0px 0px 12px 0px}
+
+#search #search_footer ul li .ICO, #search #search_footer ul li .ICO path {height: 13px; width: 13px; fill: #B3B3B3}
+
+#search #search_footer ul li.ac, #search #search_footer ul li.ac .ICO path {background-color: #D9C16C; fill: #F9F7F5}
+
+/* search footer hover styling */
+#search #search_footer ul li:hover:not(.ac), #search #search_footer ul li:hover:not(.ac) .ICO path {background-color: #F0EBE4; fill: #B3B3B3}
